@@ -1,0 +1,20 @@
+{
+  "name": "big-cursor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcomnes/big-cursor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcomnes/big-cursor/issues"
+  },
+  "homepage": "https://github.com/bcomnes/big-cursor#readme"
+}

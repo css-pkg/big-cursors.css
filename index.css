@@ -1,0 +1,7 @@
+html {
+  cursor: url("./assets/pointer.png"), auto;
+}
+
+a, button, input {
+  cursor: url("./assets/hand.png"), auto !important
+}
