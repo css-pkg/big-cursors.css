@@ -1,20 +1,50 @@
 {
   "name": "big-cursors.css",
+  "description": "Big cursors as a node packaged module.",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.css",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": {
+    "name": "Bret Comnes",
+    "url": "https://bret.io"
   },
+  "bugs": {
+    "url": "https://github.com/bcomnes/big-cursor/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.0.0",
+    "budo": "^11.0.0",
+    "highlight.js": "^9.8.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.0.0",
+    "postcss": "^6.0.19",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cli": "^5.0.0",
+    "postcss-import": "^11.0.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-url": "^7.3.1",
+    "rimraf": "^2.5.4",
+    "sitedown": "^3.0.1",
+    "style.css": "^1.0.0-beta-1",
+    "top-bar.css": "^1.2.0",
+    "watchify": "^3.11.0"
+  },
+  "homepage": "https://big-cursors.netlify.com",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bcomnes/big-cursor.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bcomnes/big-cursor/issues"
-  },
-  "homepage": "https://github.com/bcomnes/big-cursor#readme"
+  "scripts": {
+    "build": "npm run clean && run-p build:*",
+    "build:css": "postcss site/site.css -m -o build/bundle.css",
+    "build:md": "sitedown . -b build -l site/layout.html",
+    "clean": "rimraf build && mkdirp build",
+    "start": "npm run watch",
+    "test": "npm run build",
+    "watch": "npm run clean && run-p watch:*",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:js": "budo --dir build --live --open",
+    "watch:md": "npm run build:md -- -w"
+  }
 }
