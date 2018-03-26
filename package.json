@@ -7,7 +7,7 @@
     "url": "https://bret.io"
   },
   "bugs": {
-    "url": "https://github.com/bcomnes/big-cursor/issues"
+    "url": "https://github.com/bcomnes/big-cursors.css/issues"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
@@ -33,7 +33,7 @@
   "main": "index.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bcomnes/big-cursor.git"
+    "url": "git+https://github.com/bcomnes/big-cursors.css.git"
   },
   "scripts": {
     "build": "npm run clean && run-p build:*",
